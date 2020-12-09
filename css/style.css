@@ -3,3 +3,87 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+li {
+  list-style-type: none;
+}
+
+/* debug */
+.debug {
+  height: 200px;
+  border: 1px solid black;
+}
+
+.centratura {
+  width: 80%;
+  margin: 0 auto;
+  /* debug */
+  height: 100%;
+  border: 1px solid pink;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px;
+}
+
+#style-header {
+  width: 80%;
+  margin-top: 30px;
+  margin-left: 10%;
+}
+.style-buttons-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#display-span {
+  display: block;
+}
+
+.style-plus-button {
+  margin-bottom: 30px;
+  border-radius: 50%;
+  padding: 15px;
+  border: 0;
+  background-color: #bf1e23;
+}
+
+#demos-button {
+  margin-bottom: 5px;
+}
+
+#flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-header {
+  width: 30%;
+}
+
+#item-header-mid {
+  width: 40%;
+}
+.flex-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-list {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* sfondo footer */
+/* .background {
+  background-image: url("../img/footer-background.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+} */

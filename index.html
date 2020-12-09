@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Avada Takeout</title>
@@ -9,47 +10,175 @@
   <body>
     <!-- contenitore Vue -->
     <div id="root">
-      <!-- contenitore centrato -->
+      <!-- contenitore -->
       <main id="container">
-        <!-- header -->
-        <header>
+        <!-- contenitore jumbo + header -->
+        <div class="debug">
+          <!-- header -->
+          <div class="container-header">
+            <header id="style-header">
+              <div id="flex-header">
+                <div class="item-header">
+                  <img :src="logo" alt="logo">
+                </div>
+                <div class="flex-menu" id="item-header-mid">
+                  <a href="#" v-for="item in menu"> {{item.titlelist}}
+                    <i :class="item.icon"></i>
+                    <div class="">
+                      <ul>
+                        <li v-for="link in item.dropdown"> {{link}}</li>
+                      </ul>
+                    </div>
 
-        </header>
-        <!-- fine header -->
+                  </a>
+                </div>
+              </div>
+            </header>
+            <!-- bottoni laterali bianchi -->
+            <div >
+              <div id="style-button" class="style-buttons-right">
+                <button type="button" name="button" class="style-plus-button">
+                   <i class="fas fa-plus"></i>
+                </button>
+                <button type="button" name="button" id="demos-button">
+                  <i></i>
+                  <span> Demos </span>
+                </button>
+                <button type="button" name="button">
+                  <span>&#36; 39</span>
+                  <span id="display-span"> On Sale</span>
+                </button>
+              </div>
+              <!-- <div class="">
 
-        <!-- blocco popular dishes (background) -->
-        <div class="">
-          <!-- blocco in position absolute (popular dishes) -->
-          <div class="">
+              </div>
+              <div class="">
+
+              </div> -->
+            </div>
 
           </div>
+
+          <!-- fine header -->
+
+
+          <!-- intro jumbotron -->
+          <div class="">
+            <div class="centratura">
+
+            </div>
+
+          </div>
+          <!-- fine intro jumbo-->
+        </div>
+        <!-- fine jumbo -->
+
+
+        <!-- blocco popular dishes (background) -->
+        <div class="debug">
+          <div class="centratura">
+            <!-- blocco in position absolute (popular dishes) -->
+            <div class="">
+              <!-- header popular dishes in flex-->
+              <div class="">
+
+              </div>
+              <!-- titolo -->
+              <div class="">
+
+              </div>
+              <!-- card dishes in flex -->
+              <div class="">
+
+              </div>
+              <!-- button start your order -->
+              <div class="">
+                <!-- <button type="button" name="order"> Start your order</button> -->
+              </div>
+
+            </div>
+          </div>
+
         </div>
         <!-- fine background popular dishes -->
 
         <!-- blocco Menu Categories -->
-        <div class="">
+        <div class="debug">
+          <div class="centratura">
+            <!-- menu titolo + button in flex -->
+            <div class="">
+
+            </div>
+
+            <!-- cards categorie in flex-->
+            <div class="">
+
+            </div>
+
+            <!-- caratteristiche speciali in flex -->
+            <div class="">
+
+            </div>
+
+          </div>
 
         </div>
         <!-- fine blocco menu categories -->
 
         <!-- Download store -->
-        <div class="">
+        <div class="debug">
+          <div class="centratura">
+
+          </div>
 
         </div>
         <!-- fine download -->
 
         <!-- blocco News -->
-        <div class="">
+        <div class="debug">
+          <div class="centratura">
+            <!-- titolo + button (come blocco categorie menu) -->
+            <div class="">
 
-        </div>
-        <!-- fine blocco news -->
+            </div>
+
+            <!-- new in flex -->
+            <div class="">
+
+            </div>
+
+          </div>
+          <!-- fine blocco news -->
+
+          </div>
 
       </main>
       <!-- fine contenitore centrato -->
 
 
       <!-- footer -->
-      <footer>
+      <footer :class="footerBackground" class="debug">
+        <!-- liste footer in flex -->
+        <div class="footer-list">
+          <div v-for="titolo in footerLists">
+            <h3>{{titolo.title}}</h3>
+            <ul>
+              <li v-for="link in titolo.listLinks"> <a href="#"> {{link.name}}</a> <span>{{link.time}}</span> </li>
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- mid footer -->
+        <div class="">
+
+        </div>
+
+        <!-- copyright + icone -->
+        <div class="">
+
+        </div>
+
       </footer>
 
     </div>
