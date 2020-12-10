@@ -8,17 +8,31 @@ li {
   list-style-type: none;
 }
 
+a {
+  text-decoration: none;
+  color: red;
+}
+
 /* debug */
 .debug {
-  height: 200px;
+  height: 500px;
   border: 1px solid black;
 }
 
+.container-jumbo {
+  background-image: url("../img/jumbo.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+}
+
 .centratura {
-  width: 80%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 20px auto;
   /* debug */
-  height: 100%;
+  /* height: 100%; */
   border: 1px solid pink;
 }
 
@@ -29,9 +43,9 @@ li {
 }
 
 #style-header {
-  width: 80%;
+  width: 60%;
   margin-top: 30px;
-  margin-left: 10%;
+  margin-left: 20%;
 }
 .style-buttons-right {
   display: flex;
@@ -62,15 +76,102 @@ li {
 }
 
 .item-header {
-  width: 30%;
+  width: 20%;
 }
 
 #item-header-mid {
-  width: 40%;
+  width: 60%;
 }
 .flex-menu {
   display: flex;
   justify-content: space-between;
+}
+
+.position-populars {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate( -50%);
+  background-color: white;
+  height: 100px;
+  padding: 10px 0;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.title-text {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.flex-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-single {
+  text-align: center;
+}
+
+.style-span-populars {
+  color: #cc1a26;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.cards-menu {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.single-card-menu {
+  width: 24%;
+  /* height: 150px; */
+  margin-bottom: 5px;
+  position: relative;
+}
+.single-card-menu > img{
+  width: 100%;
+}
+
+.title-menu {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height:  150px;
+}
+
+.specials-properties {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.special-item {
+  width: 25%;
+  text-align: center;
+}
+
+.special-item > img {
+  width: 20%;
+  height: 40px;
 }
 
 .footer-list {
