@@ -2,7 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>Avada Takeout</title>
@@ -22,11 +25,11 @@
                   <img :src="logo" alt="logo">
                 </div>
                 <div class="flex-menu" id="item-header-mid">
-                  <a href="#" v-for="item in menu"> {{item.titlelist}}
-                    <i :class="item.icon"></i>
-                    <div class="">
+                  <a href="#" v-for="(item, index) in menu" :class="index === 0 ? 'yellow' : ''" class="drop" > {{item.titlelist}}
+                    <i :class="item.icon" @click="showdrop"></i>
+                    <div class="dropdown" v-if="index === 0" :class="hidedrop">
                       <ul>
-                        <li v-for="link in item.dropdown"> {{link}}</li>
+                        <li v-for="link in item.dropdown" > {{link}}</li>
                       </ul>
                     </div>
 
@@ -135,49 +138,50 @@
             <!-- cards categorie in flex-->
             <div class="cards-menu">
               <div class="single-card-menu">
-                <img src="img/appetizers.jpg" alt="appetizers">
+                <a href="#" class="img-menu"><img src="img/appetizers.jpg" alt="appetizers"></a>
                 <div class="title-menu">
                   <span>Appetizers</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <img src="img/burgers.jpg" alt="burgers">
+                <a href="#" class="img-menu"><img src="img/burgers.jpg" alt="burgers"></a>
                 <div class="title-menu">
                   <span>Burgers</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <img src="img/pizza.jpg" alt="pizza">
+                <a href="#" class="img-menu"><img src="img/pizza.jpg" alt="pizza"></a>
                 <div class="title-menu">
                   <span>Pizzas</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <img src="img/friesmenu.jpg" alt="fries">
+                <a href="#" class="img-menu"><img src="img/friesmenu.jpg" alt="fries"></a>
                 <div class="title-menu">
                   <span>Fries</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <img src="img/sides.jpg" alt="sides">
+                <a href="#" class="img-menu"><img src="img/sides.jpg" alt="sides"></a>
                 <div class="title-menu">
                   <span>Sides</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <img src="img/desserts.jpg" alt="desserts">
+                <a href="#" class="img-menu"><img src="img/desserts.jpg" alt="desserts"></a>
                 <div class="title-menu">
                   <span>Desserts</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <img src="img/beverages.jpg" alt="beverages">
+                <a href="#" class="img-menu"><img src="img/beverages.jpg" alt="beverages"></a>
+
                 <div class="title-menu">
                   <span>Beverages</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <img src="img/specials.jpg" alt="specials">
+                <a href="#" class="img-menu"><img src="img/specials.jpg" alt="specials"></a>
                 <div class="title-menu">
                   <span>Specials</span>
                 </div>
@@ -211,8 +215,18 @@
         <!-- fine blocco menu categories -->
 
         <!-- Download store -->
-        <div class="">
-          <div class="centratura">
+        <div id="download-app">
+          <div class="centratura text-download">
+            <h3>Dowload Our</h3>
+            <h1>Ordering App</h1>
+            <div class="apps-img">
+              <a href="#" class="button-app">
+                <img src="img/app-store.png" alt="appstore">
+              </a>
+              <a href="#" class="button-app">
+                <img src="img/play-store.png" alt="playstore">
+              </a>
+            </div>
 
           </div>
 
@@ -223,13 +237,23 @@
         <div class="">
           <div class="centratura">
             <!-- titolo + button (come blocco categorie menu) -->
-            <div class="">
-
+            <div class="categories">
+              <h2>Latest News</h2>
+              <button type="button" name="button"> View the full menu</button>
             </div>
 
             <!-- new in flex -->
-            <div class="">
-
+            <div class="news">
+              <div class="item-news">
+                <img src="img/pancake-burger-400x300.jpg" alt="pancakeburger">
+                <h2>New: The Pancake Burger</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              </div>
+              <div class="item-news">
+                <img src="img/new-milkshake-menu-400x300.jpg" alt="milkshake">
+                <h2>New: The Milkshake Menu</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              </div>
             </div>
 
           </div>
@@ -242,25 +266,68 @@
 
 
       <!-- footer -->
-      <footer :class="footerBackground" class="debug">
+      <footer :class="footerBackground" class="footer-display">
         <!-- liste footer in flex -->
         <div class="footer-list">
-          <div v-for="titolo in footerLists">
-            <h3>{{titolo.title}}</h3>
+          <div v-for="menu in orderOnline" class="item-footer-list">
+            <h3>{{menu.title}}</h3>
             <ul>
-              <li v-for="link in titolo.listLinks"> <a href="#"> {{link.name}}</a> <span>{{link.time}}</span> </li>
+              <li v-for="link in menu.linksMenu"> <a :href="link.href"> {{link.name}}</a></li>
             </ul>
+          </div>
+          <div v-for="nav in navigate" class="item-footer-list">
+            <h3>{{nav.title}}</h3>
+            <ul>
+              <li v-for="(link, index) in nav.linksNav" > <a :href="link.href" :class="index === 0 ? 'yellow' : ''"> {{link.name}}</a></li>
+            </ul>
+          </div>
+          <div v-for="info in information" class="item-footer-list">
+            <h3>{{info.title}}</h3>
+            <ul>
+              <li v-for="link in info.linksInfo"> <a :href="link.href"> {{link.name}}</a></li>
+            </ul>
+            <div class="apple">
+              <a :href="info.appStore.href"> <img :src="info.appStore.img" alt=""> </a>
+              <a :href="info.playStore.href"> <img :src="info.playStore.img" alt=""> </a>
+            </div>
+          </div>
+          <div v-for="hours in opening" class="item-footer-list">
+            <h3>{{hours.title}}</h3>
+            <ul>
+              <li v-for="day in hours.days"> <span> {{day.day}}</span> <span style="color:yellow">{{day.time}}</span> </li>
+            </ul>
+          </div>
+          <div class="voucher-style" class="item-footer-list">
+            <h3>{{voucher.title}}</h3>
+            <img :src="voucher.img" alt="">
+            <p> Just Use The Code <br> <span style="color: yellow"> {{voucher.saleCode}}</span> <br> At Checkout</p>
           </div>
         </div>
 
 
         <!-- mid footer -->
-        <div class="">
-
+        <div class="registration-email">
+          <img :src="logo" alt="avadatakeout">
+          <div class="text-intro-registration">
+            <h1 style="color:yellow">{{titleFootermid}}</h1>
+            <h5 style="margin-top: 20px; color: white">{{registrationTitle}}</h5>
+          </div>
+          <input type="email" name="" value="" class="style-input-button" placeholder="you@email.com" v-model="inputEmail">
+          <div class="button-email">
+            <button type="button" name="button" class="style-input-button" @click="buttonInput">Subscribe</button>
+          </div>
         </div>
 
         <!-- copyright + icone -->
-        <div class="">
+        <div class="icon-copyright">
+          <div class="socials">
+            <div class="item-socials" v-for="icona in socialIcons">
+              <a href="#"><i :class="icona" class="style-social"></i></a>
+            </div>
+          </div>
+          <div class="privacy">
+            <span>&copy; Copyright 2012 - 2020 | Avada Theme by <span style="color: white">ThemeFusion</span> | All Rights Reserved | Powered by <span style="color: white">WordPress</span></span>
+          </div>
 
         </div>
 

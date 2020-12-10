@@ -2,10 +2,11 @@ var app = new Vue({
 el: '#root',
 data: {
   logo: "img/takeout-logo-mobile.png",
+  hidedrop: "hidedrop",
   menu: [
     {
       titlelist: "Home",
-      dropdown: [
+      dropdown:[
         "Most Populars",
         "Menu Categories",
         "Ordering App",
@@ -32,148 +33,176 @@ data: {
 
   ],
   footerBackground: "background",
-  footerLists: [
+  titleFootermid: "Stay In The Loop",
+  registrationTitle: "Sign up to receive up to date news and offers directly in your inbox:",
+  inputEmail: "",
+  emailList: [],
+  orderOnline: [
     {
       title: "Order Online",
-      listLinks: [
+      linksMenu: [
         {
-          name: "Appetizers"
+          name: "Appetizers",
+          href: "#"
         },
         {
-          name: "Burgers"
+          name: "Burgers",
+          href: "#"
         },
         {
-          name: "Pizza"
+          name: "Pizza",
+          href: "#"
         },
         {
           name: "Fries",
+          href: "#"
         },
         {
           name: "Sides",
+          href: "#"
         },
         {
           name: "Desserts",
+          href: "#"
         },
         {
           name: "Beverages",
+          href: "#"
         },
         {
-          name: "Specials"
-        }
-      ]
-    },
+          name: "Specials",
+          href: "#"
+        },
+      ],
+    }
+  ],
+  navigate: [
     {
       title: "Navigate",
-      listLinks: [
+      linksNav: [
         {
-          name: "Home"
+          name: "Home",
+          href: "#"
         },
         {
-          name: "Alternate Home"
+          name: "Alternate Home",
+          href: "#"
         },
         {
-          name: "Menu"
+          name: "Menu",
+          href: "#"
         },
         {
           name: "About",
+          href: "#"
         },
         {
           name: "News",
+          href: "#"
         },
         {
           name: "Contact Us",
+          href: "#"
         },
         {
           name: "Cart",
+          href: "#"
         }
-      ]
-    },
+      ],
+    }
+  ],
+  information: [
     {
       title: "Information",
-      listLinks: [
+      appStore: {
+        href: "#",
+        img: "img/app-store.png"
+      },
+      playStore: {
+        href: "#",
+        img: "img/play-store.png"
+      },
+      linksInfo: [
         {
-          name: "My Account"
+          name: "My Account",
+          href: "#"
         },
         {
-          name: "Terms Of Services"
+          name: "Terms Of Service",
+          href: "#"
         },
         {
-          name: "Privacy Policy"
+          name: "Privacy Policy",
+          href: "#"
         },
-        {
-          name: "img/app-store.png",
-        },
-        {
-          name: "img/play-store.png",
-        }
+
       ]
-    },
+    }
+  ],
+  opening: [
     {
       title: "Opening Hours",
-      listLinks: [
+      days: [
         {
-          name: "Mon -",
+          day: "Mon - ",
           time: "10AM to 11PM"
         },
         {
-          name: "Tue -",
+          day: "Tue - ",
           time: "10AM to 11PM"
         },
         {
-          name: "Wed -",
+          day: "Wed - ",
           time: "10AM to 11PM"
         },
         {
-          name: "Thur -",
+          day: "Thur - ",
           time: "10AM to 11PM"
         },
         {
-          name: "Fri -",
+          day: "Fri - ",
           time: "10AM to 11PM"
         },
         {
-          name: "Sat -",
+          day: "Sat - ",
           time: "10AM to 1AM"
         },
         {
-          name: "Sun -",
-          time: "10AM to 11PM"
-        }
-      ],
-    },
-    {
-      title: "Voucher",
-      listLinks: [
-        {
-          name: "img/voucher.png"
+          day: "Sun - ",
+          time: "11AM to 10PM"
         },
-        {
-          name: "Just Use The Code"
-        },
-        {
-          name: "FIRSTORDER",
-        },
-        {
-          name: "At Checkout"
-        }
       ]
     },
-  ]
-  // voucher: ,//img voucher
-  // downloadStore: ,//img Stores
-  // socialIcons: [] ,// array icone
-  // inputEmail: "", //collegare v-model
-  // emailList: [] , //array dove inserire email del form
+  ],
+  voucher: {
+    title: "Voucher",
+    img: "img/voucher.png",
+    saleCode: "FIRSTORDER"
+  },
+  socialIcons: [
+    "fa fa-facebook",
+    "fab fa-twitter",
+    "fab fa-instagram",
+    "fab fa-linkedin-in",
+    "fas fa-rss",
+    "fab fa-youtube",
+    "far fa-envelope"
+  ],
+
 
 },
 methods: {
   buttonInput: function() {
-
+    this.emailList.push(this.inputEmail);
+    console.log(this.emailList);
   },
-
-
-
-
+  showdrop: function() {
+    if (this.hidedrop === "hidedrop") {
+      this.hidedrop = "showdrop"
+    } else {
+      this.hidedrop = "hidedrop"
+    }
+  }
 }
 
 });
