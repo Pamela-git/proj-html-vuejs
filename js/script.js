@@ -2,33 +2,52 @@ var app = new Vue({
 el: '#root',
 data: {
   logo: "img/takeout-logo-mobile.png",
+  hrefLogo: "#",
   hidedrop: "hidedrop",
   menu: [
     {
       titlelist: "Home",
+      href: "#",
+      icon: "fa fa-angle-down",
       dropdown:[
-        "Most Populars",
-        "Menu Categories",
-        "Ordering App",
-        "Latest News"
+        {
+          titledrop: "Most Populars",
+          href: "#"
+        },
+        {
+          titledrop: "Menu categories",
+          href: "#"
+        },
+        {
+          titledrop: "Ordering App",
+          href: "#"
+        },
+        {
+          titledrop: "Latest New",
+          href: "#"
+        }
       ],
-      icon: "fa fa-angle-down"
     },
     {
-      titlelist: "Order Online"
+      titlelist: "Order Online",
+      href: "#"
     },
     {
-      titlelist: "About"
+      titlelist: "About",
+      href: "#"
     },
     {
-      titlelist: "News"
+      titlelist: "News",
+      href: "#"
     },
     {
-      titlelist: "Contact Us"
+      titlelist: "Contact Us",
+      href: "#"
     },
     {
       titlelist: "",
-      icon: "fas fa-shopping-cart"
+      icon: "fas fa-shopping-cart",
+      href: "#"
     },
 
   ],
@@ -196,8 +215,8 @@ methods: {
     this.emailList.push(this.inputEmail);
     console.log(this.emailList);
   },
-  showdrop: function() {
-    if (this.hidedrop === "hidedrop") {
+  showdrop(i) {
+    if ((this.hidedrop === "hidedrop") && (i === 0)) {
       this.hidedrop = "showdrop"
     } else {
       this.hidedrop = "hidedrop"

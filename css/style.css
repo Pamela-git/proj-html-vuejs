@@ -11,6 +11,7 @@ body {
 
 li {
   list-style-type: none;
+  margin: 10px 0;
 }
 
 a {
@@ -18,10 +19,30 @@ a {
   text-decoration: none;
 }
 
-/* debug */
-.debug {
-  height: 500px;
-  border: 1px solid black;
+button:hover {
+  cursor: pointer;
+}
+
+.button-style-gen {
+  background-color: #cc1a26;
+  color: white;
+  border-radius: 50px;
+  border: 0;
+  width: 200px;
+  padding: 10px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.button-style-gen:hover {
+  cursor: pointer;
+  background-color: #bf1e23;
+}
+
+/* container populars */
+.container-populars {
+  min-height: 600px;
+  position: relative;
 }
 
 .container-jumbo {
@@ -30,12 +51,11 @@ a {
   background-position: bottom;
   background-size: cover;
   height: 500px;
-  position: relative;
 }
 
 .centratura {
   width: 60%;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
 .container-header {
@@ -57,6 +77,9 @@ a {
 
 .drop {
   position: relative;
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
 }
 
 .dropdown {
@@ -84,6 +107,7 @@ a {
 }
 
 .style-plus-button {
+  color: white;
   margin-bottom: 30px;
   border-radius: 50%;
   padding: 15px;
@@ -93,6 +117,21 @@ a {
 
 #demos-button {
   margin-bottom: 5px;
+}
+
+.button-column {
+  width: 100%;
+  height: 50px;
+  color: #555454;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 0;
+}
+
+#dollar-sale {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 #flex-header {
@@ -113,14 +152,26 @@ a {
   justify-content: space-between;
 }
 
+.style-text-jumbo {
+  color: white;
+}
+
+.style-title-jumbo {
+  font-size: 50px;
+}
+
+
 .position-populars {
   position: absolute;
-  top: 80%;
+  top: -10%;
   left: 50%;
   transform: translate( -50%);
   background-color: white;
-  height: 100px;
   padding: 10px 0;
+}
+
+#position-button-order {
+  text-align: center;
 }
 
 .nav-menu {
@@ -140,10 +191,50 @@ a {
 
 .card-single {
   text-align: center;
+  position: relative;
+}
+
+.card-single:hover .add-cart {
+  display: block;
+}
+
+.card-single:hover .overlay-img-pop {
+  filter: brightness(50%);
+}
+
+.add-cart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: none;
+}
+
+.button-cart {
+  border-radius: 50%;
+  padding: 5px;
+  background-color: black;
+  border: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.fa-check-square {
+  font-size: 20px;
+  color: white;
 }
 
 .style-span-populars {
   color: #cc1a26;
+}
+
+.background-ham {
+  background-image: url("../img/backburg.jpg");
+  min-height: 400px;
+  background-position: center;
+  background-size: cover;
 }
 
 .categories {
@@ -160,7 +251,6 @@ a {
 
 .single-card-menu {
   width: 24%;
-  /* height: 150px; */
   margin-bottom: 5px;
   position: relative;
 }
@@ -229,6 +319,9 @@ a {
   width: 15%;
 }
 
+/* .container-news {
+  margin: 40px 0;
+} */
 .news {
   display: flex;
   justify-content: space-between;
@@ -239,17 +332,23 @@ a {
   text-align: center;
 }
 
+.overlayimg:hover {
+  filter: brightness(50%);
+}
+
+
 .item-news > img {
   max-width: 100%;
 }
 
 .footer-display {
-  height: 700px;
+  min-height: 800px;
+  padding: 30px 0;
 }
 
 .footer-list {
   width: 90%;
-  margin: 0 auto;
+  margin: 30px auto;
   display: flex;
   justify-content: space-between;
   color: white;
@@ -333,6 +432,6 @@ div.apple > a:first-child {
 }
 
 .privacy {
-  color: #fcd66c;
+  color: yellow;
   text-align: center;
 }
