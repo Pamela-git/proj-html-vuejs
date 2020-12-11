@@ -2,12 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- link css -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <!-- titolo documento -->
     <title>Avada Takeout</title>
   </head>
   <body>
@@ -19,6 +24,7 @@
         <div class="container-jumbo">
           <!-- header -->
           <div class="container-header">
+            <!-- header -->
             <header id="style-header">
               <div id="flex-header">
                 <div class="item-header">
@@ -48,12 +54,12 @@
                    <i class="fas fa-plus"></i>
                 </button>
                 <button type="button" name="button" id="demos-button" class="button-column">
-                  <i></i>
-                  <span> Demos </span>
+                  <i class="fas fa-folder"></i>
+                  <span class="display-span"> Demos </span>
                 </button>
                 <button type="button" class="button-column">
                   <span id="dollar-sale">&#36; 39</span>
-                  <span id="display-span"> On Sale</span>
+                  <span class="display-span"> On Sale</span>
                 </button>
               </div>
             </div>
@@ -62,9 +68,7 @@
 
           <!-- fine header -->
 
-
           <!-- intro jumbotron -->
-          <div class="">
             <div class="centratura style-text-jumbo" >
               <h2>Hungry?</h2>
               <h1 class="style-title-jumbo" style="color: yellow">Great Food</h1>
@@ -74,7 +78,6 @@
                  <i class='fas fa-arrow-alt-circle-right'></i>
               </button>
             </div>
-          </div>
           <!-- fine intro jumbo-->
         </div>
         <!-- fine jumbo -->
@@ -86,19 +89,19 @@
               <div class="nav-menu">
                 <div class="">
                   <i class="far fa-clock"></i>
-                  <span>24/7 Delivery</span>
+                  <span class="style-span-info">24/7 Delivery</span>
                 </div>
                 <div class="">
                   <i class="fas fa-hamburger"></i>
-                  <span>Over 100 dishes</span>
+                  <span class="style-span-info">Over 100 dishes</span>
                 </div>
                 <div class="">
                   <i class="fas fa-mobile-alt"></i>
-                  <span>In app ordering</span>
+                  <span class="style-span-info">In app ordering</span>
                 </div>
                 <div class="">
                   <i class="fas fa-car"></i>
-                  <span>Fast Delivery</span>
+                  <span class="style-span-info">Fast Delivery</span>
                 </div>
               </div>
               <!-- titolo -->
@@ -149,8 +152,7 @@
         <!-- fine background popular dishes -->
 
         <!-- blocco Menu Categories -->
-        <div class="">
-          <div class="centratura">
+          <div class="container-news-menu">
             <!-- menu titolo + button in flex -->
             <div class="categories">
               <h2> Menu Categories</h2>
@@ -229,10 +231,7 @@
                 <h5>Keto Friendly</h5>
               </div>
             </div>
-
           </div>
-
-        </div>
         <!-- fine blocco menu categories -->
 
         <!-- Download store -->
@@ -255,7 +254,7 @@
         <!-- fine download -->
 
         <!-- blocco News -->
-          <div class="centratura container-news">
+          <div class="container-news-menu">
             <!-- titolo + button (come blocco categorie menu) -->
             <div class="categories">
               <h2>Latest News</h2>
@@ -315,7 +314,7 @@
               <li v-for="day in hours.days"> <span> {{day.day}}</span> <span style="color:yellow">{{day.time}}</span> </li>
             </ul>
           </div>
-          <div class="voucher-style" class="item-footer-list">
+          <div class="voucher-style item-footer-list">
             <h3>{{voucher.title}}</h3>
             <img :src="voucher.img" alt="">
             <p> Just Use The Code <br> <span style="color: yellow"> {{voucher.saleCode}}</span> <br> At Checkout</p>
@@ -339,8 +338,8 @@
         <!-- copyright + icone -->
         <div class="icon-copyright">
           <div class="socials">
-            <div class="item-socials" v-for="icona in socialIcons">
-              <a href="#"><i :class="icona" class="style-social"></i></a>
+            <div class="item-socials" v-for="icon in socialIcons">
+              <a :href="icon.href"><i :class="icon.icona" class="style-social"></i></a>
             </div>
           </div>
           <div class="privacy">

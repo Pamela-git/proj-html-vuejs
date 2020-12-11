@@ -1,9 +1,13 @@
 var app = new Vue({
 el: '#root',
 data: {
+  // Logo Avada
   logo: "img/takeout-logo-mobile.png",
+  // Link Logo
   hrefLogo: "#",
+  // classe per far apparire/scomparire il menu dropdown
   hidedrop: "hidedrop",
+  // array header menu
   menu: [
     {
       titlelist: "Home",
@@ -49,13 +53,10 @@ data: {
       icon: "fas fa-shopping-cart",
       href: "#"
     },
-
   ],
+  // classe per imgbackground footer
   footerBackground: "background",
-  titleFootermid: "Stay In The Loop",
-  registrationTitle: "Sign up to receive up to date news and offers directly in your inbox:",
-  inputEmail: "",
-  emailList: [],
+  // Array footer con lista link per sezione Online Order
   orderOnline: [
     {
       title: "Order Online",
@@ -95,6 +96,7 @@ data: {
       ],
     }
   ],
+  // array li con link per navigazione in pagina
   navigate: [
     {
       title: "Navigate",
@@ -130,6 +132,7 @@ data: {
       ],
     }
   ],
+  // array link stores
   information: [
     {
       title: "Information",
@@ -141,6 +144,7 @@ data: {
         href: "#",
         img: "img/play-store.png"
       },
+      // array link per info
       linksInfo: [
         {
           name: "My Account",
@@ -158,6 +162,7 @@ data: {
       ]
     }
   ],
+  // array orari apertura
   opening: [
     {
       title: "Opening Hours",
@@ -193,28 +198,59 @@ data: {
       ]
     },
   ],
+  // sezione Voucher con codice sconto
   voucher: {
     title: "Voucher",
     img: "img/voucher.png",
     saleCode: "FIRSTORDER"
   },
+  // icone social e link
   socialIcons: [
-    "fa fa-facebook",
-    "fab fa-twitter",
-    "fab fa-instagram",
-    "fab fa-linkedin-in",
-    "fas fa-rss",
-    "fab fa-youtube",
-    "far fa-envelope"
+    {
+      icona: "fa fa-facebook",
+      href: "#"
+    },
+    {
+      icona: "fab fa-twitter",
+      href: "#"
+    },
+    {
+      icona: "fab fa-instagram",
+      href: "#"
+    },
+    {
+      icona: "fab fa-linkedin-in",
+      href: "#"
+    },
+    {
+      icona: "fas fa-rss",
+      href: "#"
+    },
+    {
+      icona: "fab fa-youtube",
+      href: "#"
+    },
+    {
+      icona: "far fa-envelope",
+      href: "#"
+    },
   ],
-
-
+  // titolo footer sezione input
+  titleFootermid: "Stay In The Loop",
+  //sottotitolo footer sezione input
+  registrationTitle: "Sign up to receive up to date news and offers directly in your inbox:",
+  // v-model per registrazione email
+  inputEmail: "",
+  // array dove inserire le email input
+  emailList: [],
 },
 methods: {
+  // metodo per pushare le email nell'array
   buttonInput: function() {
     this.emailList.push(this.inputEmail);
     console.log(this.emailList);
   },
+  // funzione per nascondere/far comparire il dropdown
   showdrop(i) {
     if ((this.hidedrop === "hidedrop") && (i === 0)) {
       this.hidedrop = "showdrop"

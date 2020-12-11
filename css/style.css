@@ -41,7 +41,7 @@ button:hover {
 
 /* container populars */
 .container-populars {
-  min-height: 600px;
+  min-height: 550px;
   position: relative;
 }
 
@@ -55,7 +55,7 @@ button:hover {
 
 .centratura {
   width: 60%;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 
 .container-header {
@@ -102,8 +102,12 @@ button:hover {
   display: block;
 }
 
-#display-span {
+.display-span {
   display: block;
+}
+
+.fa-folder {
+  font-size: 30px;
 }
 
 .style-plus-button {
@@ -126,6 +130,7 @@ button:hover {
   font-weight: bold;
   border-radius: 5px;
   border: 0;
+  padding: 5px;
 }
 
 #dollar-sale {
@@ -154,6 +159,7 @@ button:hover {
 
 .style-text-jumbo {
   color: white;
+
 }
 
 .style-title-jumbo {
@@ -163,11 +169,15 @@ button:hover {
 
 .position-populars {
   position: absolute;
-  top: -10%;
+  top: -5%;
   left: 50%;
   transform: translate( -50%);
   background-color: white;
   padding: 10px 0;
+}
+
+.style-span-info {
+  color: #555454;
 }
 
 #position-button-order {
@@ -192,6 +202,11 @@ button:hover {
 .card-single {
   text-align: center;
   position: relative;
+  width: 32%;
+}
+
+.card-single > img {
+  width: 100%;
 }
 
 .card-single:hover .add-cart {
@@ -199,7 +214,7 @@ button:hover {
 }
 
 .card-single:hover .overlay-img-pop {
-  filter: brightness(50%);
+  filter: brightness(65%);
 }
 
 .add-cart {
@@ -233,7 +248,7 @@ button:hover {
 .background-ham {
   background-image: url("../img/backburg.jpg");
   min-height: 400px;
-  background-position: center;
+  background-position: top;
   background-size: cover;
 }
 
@@ -300,15 +315,16 @@ button:hover {
 }
 
 .text-download {
-  padding: 50px 0;
+  padding: 100px 0;
 }
 
 .text-download > h3 {
   color: white;
+  font-size: 30px
 }
 .text-download > h1 {
   color: yellow;
-  font-size: 40px;
+  font-size: 50px;
   font-weight: bold;
 }
 
@@ -319,9 +335,10 @@ button:hover {
   width: 15%;
 }
 
-/* .container-news {
-  margin: 40px 0;
-} */
+.container-news-menu {
+  width: 60%;
+  margin: 60px auto;
+}
 .news {
   display: flex;
   justify-content: space-between;
@@ -360,6 +377,10 @@ button:hover {
 
 .item-footer-list {
   width: 20%;
+}
+
+.item-footer-list > h3 {
+  margin-bottom: 30px;
 }
 
 .apple > a {
