@@ -15,60 +15,73 @@
     <!-- titolo documento -->
     <title>Avada Takeout</title>
   </head>
+  
   <body>
     <!-- contenitore Vue -->
     <div id="root">
-      <!-- contenitore -->
+
+      <!-- contenitore header + sezioni principali -->
       <main id="container">
         <!-- contenitore jumbo + header -->
         <div class="container-jumbo">
-          <!-- header -->
+          <!-- header + bottoni laterali -->
           <div class="container-header">
-            <!-- header -->
+            <!-- header logo e menu -->
             <header id="style-header">
               <div id="flex-header">
+                <!-- logo -->
                 <div class="item-header">
                   <a :href="hrefLogo"> <img :src="logo" alt="logo"></a>
                 </div>
-                <div class="flex-menu" id="item-header-mid">
+                <!--link  menu nav-->
+                <nav class="flex-menu" id="item-header-mid">
                   <ul>
-                    <li v-for="(item, index) in menu"  class="drop"  >
-                      <a :href="item.href" :class="index === 0 ? 'yellow' : ''">{{item.titlelist}}
+                    <li v-for="(item, index) in menu" class="drop">
+                      <!-- solo se l'index è uguale a 0 assegnare la classe yellow -->
+                      <a :href="item.href" :class="index === 0 ? 'yellow' : ''">
+                        {{item.titlelist}}
                         <i :class="item.icon" @click="showdrop(index)"></i>
                       </a>
+                      <!-- dropdown home -->
+                      <!-- solo se l'index è uguale a 0 creare un dropdown -->
                       <div class="dropdown" v-if="index === 0" :class="hidedrop">
                         <ul>
-                          <li v-for="link in item.dropdown" > <a :href="link.href"> {{link.titledrop}}</a></li>
+                          <!-- lista link dropdown -->
+                          <li v-for="link in item.dropdown" >
+                            <a :href="link.href"> {{link.titledrop}}</a>
+                          </li>
                         </ul>
                       </div>
                     </li>
-
                   </ul>
-                </div>
+                </nav>
+                <!-- fine nav menu -->
               </div>
             </header>
+            <!-- fine header logo + nav -->
+
             <!-- bottoni laterali -->
-            <div >
-              <div id="style-button" class="style-buttons-right">
-                <button type="button" name="button" class="style-plus-button">
-                   <i class="fas fa-plus"></i>
-                </button>
-                <button type="button" name="button" id="demos-button" class="button-column">
-                  <i class="fas fa-folder"></i>
-                  <span class="display-span"> Demos </span>
-                </button>
-                <button type="button" class="button-column">
-                  <span id="dollar-sale">&#36; 39</span>
-                  <span class="display-span"> On Sale</span>
-                </button>
-              </div>
+            <div id="style-button" class="style-buttons-right">
+              <!-- bottone aggiungi -->
+              <button type="button" name="button" class="style-plus-button">
+                <i class="fas fa-plus"></i>
+              </button>
+              <!-- demo -->
+              <button type="button" name="button" id="demos-button" class="button-column">
+                <i class="fas fa-folder"></i>
+                <span class="display-span"> Demos </span>
+              </button>
+              <!-- sales -->
+              <button type="button" class="button-column">
+                <span id="dollar-sale">&#36; 39</span>
+                <span class="display-span"> On Sale</span>
+              </button>
             </div>
-
+            <!-- fine contenitore bottoni laterali -->
           </div>
-
           <!-- fine header -->
 
-          <!-- intro jumbotron -->
+          <!-- text jumbotron -->
             <div class="centratura style-text-jumbo" >
               <h2>Hungry?</h2>
               <h1 class="style-title-jumbo" style="color: yellow">Great Food</h1>
@@ -78,16 +91,16 @@
                  <i class='fas fa-arrow-alt-circle-right'></i>
               </button>
             </div>
-          <!-- fine intro jumbo-->
+          <!-- fine text jumbo-->
         </div>
         <!-- fine jumbo -->
 
         <!-- blocco popular dishes (background) -->
         <div class="container-populars">
           <div class="centratura position-populars">
-              <!-- header popular dishes in flex-->
+              <!--header popular dishes-->
               <div class="nav-menu">
-                <div class="">
+                <div>
                   <i class="far fa-clock"></i>
                   <span class="style-span-info">24/7 Delivery</span>
                 </div>
@@ -104,18 +117,23 @@
                   <span class="style-span-info">Fast Delivery</span>
                 </div>
               </div>
+              <!-- fine header popular dishes -->
+
               <!-- titolo -->
               <div class="title-text">
                 <h2>Our Most Popular Dishes</h2>
               </div>
-              <!-- card dishes in flex -->
+
+              <!-- cards popular dishes in flex -->
               <div class="flex-cards">
                 <div class="card-single">
                   <img src="img/fries.jpg" class="overlay-img-pop" alt="fries">
                   <h3>Skin On Fries</h3>
                   <span class="style-span-populars">&#36;3.00 - &#36;6.00</span>
                   <div class="add-cart">
-                    <button type="button" name="button" class="button-cart"><i class="far fa-check-square"></i></button>
+                    <button type="button" name="button" class="button-cart">
+                      <i class="far fa-check-square"></i>
+                    </button>
                     <h5>View Cart</h5>
                   </div>
                 </div>
@@ -124,7 +142,9 @@
                   <h3>Choco Cookie Frappe</h3>
                   <span class="style-span-populars">&#36;4.99</span>
                   <div class="add-cart">
-                    <button type="button" name="button" class="button-cart"><i class="far fa-check-square"></i></button>
+                    <button type="button" name="button" class="button-cart">
+                      <i class="far fa-check-square"></i>
+                    </button>
                     <h5>View Cart</h5>
                   </div>
                 </div>
@@ -133,86 +153,111 @@
                   <h3>The Donut Burger</h3>
                   <span class="style-span-populars">&#36;6.99</span>
                   <div class="add-cart">
-                    <button type="button" name="button" class="button-cart"><i class="far fa-check-square"></i></button>
+                    <button type="button" name="button" class="button-cart">
+                      <i class="far fa-check-square"></i>
+                    </button>
                     <h5>View Cart</h5>
                   </div>
                 </div>
               </div>
               <!-- button start your order -->
               <div id="position-button-order">
-                <button type="button" name="order" class="button-style-gen"> Start Your Order  <i class='fas fa-arrow-alt-circle-right'></i>
+                <button type="button" name="order" class="button-style-gen">
+                  Start Your Order
+                  <i class='fas fa-arrow-alt-circle-right'></i>
                 </button>
               </div>
           </div>
-
+          <!-- fine blocco  cards popular dishes -->
         </div>
+        <!-- fine blocco popular dishes  -->
+
+        <!-- contenitore background hamburger -->
         <div class="background-ham">
           <img src="img/curva.svg" alt="svg">
         </div>
-        <!-- fine background popular dishes -->
 
         <!-- blocco Menu Categories -->
           <div class="container-news-menu">
             <!-- menu titolo + button in flex -->
             <div class="categories">
               <h2> Menu Categories</h2>
-              <button type="button" name="button" class="button-style-gen"> View The Full Menu <i class='fas fa-arrow-alt-circle-right'></i></button>
+              <button type="button" name="button" class="button-style-gen">
+                View The Full Menu
+                <i class='fas fa-arrow-alt-circle-right'></i>
+              </button>
             </div>
 
             <!-- cards categorie in flex-->
             <div class="cards-menu">
               <div class="single-card-menu">
-                <a href="#" class="img-menu"><img src="img/appetizers.jpg" alt="appetizers"></a>
+                <a href="#" class="img-menu">
+                  <img src="img/appetizers.jpg" alt="appetizers">
+                </a>
                 <div class="title-menu">
                   <span>Appetizers</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <a href="#" class="img-menu"><img src="img/burgers.jpg" alt="burgers"></a>
+                <a href="#" class="img-menu">
+                  <img src="img/burgers.jpg" alt="burgers">
+                </a>
                 <div class="title-menu">
                   <span>Burgers</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <a href="#" class="img-menu"><img src="img/pizza.jpg" alt="pizza"></a>
+                <a href="#" class="img-menu">
+                  <img src="img/pizza.jpg" alt="pizza">
+                </a>
                 <div class="title-menu">
                   <span>Pizzas</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <a href="#" class="img-menu"><img src="img/friesmenu.jpg" alt="fries"></a>
+                <a href="#" class="img-menu">
+                  <img src="img/friesmenu.jpg" alt="fries">
+                </a>
                 <div class="title-menu">
                   <span>Fries</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <a href="#" class="img-menu"><img src="img/sides.jpg" alt="sides"></a>
+                <a href="#" class="img-menu">
+                  <img src="img/sides.jpg" alt="sides">
+                </a>
                 <div class="title-menu">
                   <span>Sides</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <a href="#" class="img-menu"><img src="img/desserts.jpg" alt="desserts"></a>
+                <a href="#" class="img-menu">
+                  <img src="img/desserts.jpg" alt="desserts">
+                </a>
                 <div class="title-menu">
                   <span>Desserts</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <a href="#" class="img-menu"><img src="img/beverages.jpg" alt="beverages"></a>
+                <a href="#" class="img-menu">
+                  <img src="img/beverages.jpg" alt="beverages">
+                </a>
                 <div class="title-menu">
                   <span>Beverages</span>
                 </div>
               </div>
               <div class="single-card-menu">
-                <a href="#" class="img-menu"><img src="img/specials.jpg" alt="specials"></a>
+                <a href="#" class="img-menu">
+                  <img src="img/specials.jpg" alt="specials">
+                </a>
                 <div class="title-menu">
                   <span>Specials</span>
                 </div>
               </div>
-
+              <!-- fine cards categorie menu -->
             </div>
 
-            <!-- caratteristiche speciali in flex -->
+            <!-- caratteristiche speciali e allergeni in flex -->
             <div class="specials-properties">
               <div class="special-item">
                 <img src="img/vegetarian.png" alt="veg">
@@ -231,6 +276,7 @@
                 <h5>Keto Friendly</h5>
               </div>
             </div>
+            <!-- fine blocco allergeni e categorie speciali -->
           </div>
         <!-- fine blocco menu categories -->
 
@@ -239,6 +285,7 @@
           <div class="centratura text-download">
             <h3>Dowload Our</h3>
             <h1>Ordering App</h1>
+            <!-- blocco bottoni stores -->
             <div class="apps-img">
               <a href="#" class="button-app">
                 <img src="img/app-store.png" alt="appstore">
@@ -247,9 +294,8 @@
                 <img src="img/play-store.png" alt="playstore">
               </a>
             </div>
-
+            <!-- fine bottoni stores -->
           </div>
-
         </div>
         <!-- fine download -->
 
@@ -266,21 +312,18 @@
               <div class="item-news ">
                   <img src="img/pancake-burger-400x300.jpg" class="overlayimg" alt="pancakeburger">
                 <h2>New: The Pancake Burger</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <p class="color-text-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </div>
               <div class="item-news">
                 <img src="img/new-milkshake-menu-400x300.jpg" class="overlayimg" alt="milkshake">
                 <h2>New: The Milkshake Menu</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                <p class="color-text-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </div>
             </div>
-
           </div>
           <!-- fine blocco news -->
-
       </main>
-      <!-- fine contenitore centrato -->
-
+      <!-- fine header + sezioni principali -->
 
       <!-- footer -->
       <footer :class="footerBackground" class="footer-display">
@@ -321,8 +364,7 @@
           </div>
         </div>
 
-
-        <!-- mid footer -->
+        <!-- mid footer registration-->
         <div class="registration-email">
           <a :href="hrefLogo"><img :src="logo" alt="avadatakeout"></a>
           <div class="text-intro-registration">
@@ -331,24 +373,31 @@
           </div>
           <input type="email" name="" value="" class="style-input-button" placeholder="you@email.com" v-model="inputEmail">
           <div class="button-email">
-            <button type="button" name="button" class="style-input-button button-style-gen"  @click="buttonInput">Subscribe</button>
+            <button type="button" name="button" class="style-input-button button-style-gen" @click="buttonInput">Subscribe</button>
           </div>
         </div>
 
-        <!-- copyright + icone -->
+        <!-- copyright + icone social-->
         <div class="icon-copyright">
           <div class="socials">
             <div class="item-socials" v-for="icon in socialIcons">
-              <a :href="icon.href"><i :class="icon.icona" class="style-social"></i></a>
+              <a :href="icon.href">
+                <i :class="icon.icona" class="style-social"></i>
+              </a>
             </div>
           </div>
           <div class="privacy">
-            <span>&copy; Copyright 2012 - 2020 | Avada Theme by <span style="color: white">ThemeFusion</span> | All Rights Reserved | Powered by <span style="color: white">WordPress</span></span>
+            <span>
+              &copy; Copyright 2012 - 2020 | Avada Theme by
+              <a :href="themeFusion.href" :class="themeFusion.color">{{themeFusion.title}}</a>
+              | All Rights Reserved | Powered by
+              <a :href="wordPress.href" :class="wordPress.color">{{wordPress.title}}</a>
+            </span>
           </div>
-
         </div>
 
       </footer>
+      <!-- fine footer -->
 
     </div>
     <!-- fine contenitore vue -->

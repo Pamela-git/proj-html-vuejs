@@ -1,3 +1,4 @@
+/* regoli generali */
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
   font-weight: 400;
 }
 
+/* regole comuni alle liste, ai tag link e ai bottoni */
 li {
   list-style-type: none;
   margin: 10px 0;
@@ -23,6 +25,7 @@ button:hover {
   cursor: pointer;
 }
 
+/* regole specifiche bottoni */
 .button-style-gen {
   background-color: #cc1a26;
   color: white;
@@ -39,12 +42,13 @@ button:hover {
   background-color: #bf1e23;
 }
 
-/* container populars */
-.container-populars {
-  min-height: 550px;
-  position: relative;
+/* classe per centrare il contenuto in pagina */
+.centratura {
+  width: 60%;
+  margin: 0px auto;
 }
 
+/* regole contenitore jumbo + header */
 .container-jumbo {
   background-image: url("../img/jumbo.jpg");
   background-repeat: no-repeat;
@@ -53,92 +57,21 @@ button:hover {
   height: 500px;
 }
 
-.centratura {
-  width: 60%;
-  margin: 0px auto;
-}
-
+/* contenitore header */
 .container-header {
   display: flex;
   justify-content: space-between;
   padding: 5px 5px;
 }
 
+/* contenitore header logo + menu nav*/
 #style-header {
   width: 60%;
   margin-top: 30px;
   margin-left: 20%;
 }
-.style-buttons-right {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
 
-.drop {
-  position: relative;
-  display: inline-block;
-  margin: 0 10px;
-  color: white;
-}
-
-.dropdown {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  min-width: 120px;
-  min-height: 50px;
-  border: 2px solid yellow;
-  border-radius: 10px;
-  padding: 5px;
-  color: white;
-}
-
-.hidedrop {
-  display: none;
-}
-
-.showdrop {
-  display: block;
-}
-
-.display-span {
-  display: block;
-}
-
-.fa-folder {
-  font-size: 30px;
-}
-
-.style-plus-button {
-  color: white;
-  margin-bottom: 30px;
-  border-radius: 50%;
-  padding: 15px;
-  border: 0;
-  background-color: #bf1e23;
-}
-
-#demos-button {
-  margin-bottom: 5px;
-}
-
-.button-column {
-  width: 100%;
-  height: 50px;
-  color: #555454;
-  font-weight: bold;
-  border-radius: 5px;
-  border: 0;
-  padding: 5px;
-}
-
-#dollar-sale {
-  color: green;
-  font-weight: bold;
-  font-size: 20px;
-}
-
+/* header */
 #flex-header {
   display: flex;
   justify-content: space-between;
@@ -152,21 +85,105 @@ button:hover {
 #item-header-mid {
   width: 60%;
 }
+
+/* nav header */
 .flex-menu {
   display: flex;
   justify-content: space-between;
 }
 
+/* contenitore padre dropdown */
+.drop {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+}
+
+/* menu link dropdown */
+.dropdown {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  min-width: 120px;
+  min-height: 50px;
+  border: 2px solid yellow;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
+}
+
+/* regole per nascondere/apparire dropdown */
+.hidedrop {
+  display: none;
+}
+
+.showdrop {
+  display: block;
+}
+
+/* regole contenitore bottoni laterali jumbo */
+.style-buttons-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.style-plus-button {
+  color: white;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  padding: 15px;
+  border: 0;
+  background-color: #bf1e23;
+}
+
+/* regole generali bottoni demos e sales */
+.button-column {
+  width: 100%;
+  height: 50px;
+  color: #555454;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 0;
+  padding: 5px;
+}
+
+/* regole span bottoni laterali header */
+.display-span {
+  display: block;
+}
+
+#demos-button {
+  margin-bottom: 5px;
+}
+
+.fa-folder {
+  font-size: 30px;
+}
+
+#dollar-sale {
+  color: green;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* testo jumbo */
 .style-text-jumbo {
   color: white;
-
 }
 
 .style-title-jumbo {
   font-size: 50px;
 }
 
+/* container populars */
+.container-populars {
+  min-height: 550px;
+  position: relative;
+}
 
+/* blocco centrale populars */
 .position-populars {
   position: absolute;
   top: -5%;
@@ -176,24 +193,28 @@ button:hover {
   padding: 10px 0;
 }
 
+/* header populars */
+.nav-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* span header populars */
 .style-span-info {
   color: #555454;
+}
+
+/* titolo populars */
+.title-text {
+  text-align: center;
+  padding: 40px 0;
 }
 
 #position-button-order {
   text-align: center;
 }
 
-.nav-menu {
-  display: flex;
-  justify-content: space-around;
-}
-
-.title-text {
-  text-align: center;
-  padding: 40px 0;
-}
-
+/* contenitore cards populars */
 .flex-cards {
   display: flex;
   justify-content: space-between;
@@ -209,6 +230,12 @@ button:hover {
   width: 100%;
 }
 
+/* regole contenitore prezzi populars */
+.style-span-populars {
+  color: #cc1a26;
+}
+
+/* regole bottone hover card singole */
 .card-single:hover .add-cart {
   display: block;
 }
@@ -241,10 +268,7 @@ button:hover {
   color: white;
 }
 
-.style-span-populars {
-  color: #cc1a26;
-}
-
+/* background contenitore populars */
 .background-ham {
   background-image: url("../img/backburg.jpg");
   min-height: 400px;
@@ -252,12 +276,14 @@ button:hover {
   background-size: cover;
 }
 
+/* contenitore menu categorie */
 .categories {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
 }
 
+/* contenitore cards */
 .cards-menu {
   display: flex;
   justify-content: space-between;
@@ -274,6 +300,7 @@ button:hover {
   height: 100%;
 }
 
+/* contenitore tipo di categoria */
 .title-menu {
   width: 100%;
   height: 100%;
@@ -288,6 +315,7 @@ button:hover {
   line-height:  150px;
 }
 
+/* contenitore allergeni */
 .specials-properties {
   display: flex;
   justify-content: space-between;
@@ -306,6 +334,7 @@ button:hover {
   height: 40px;
 }
 
+/* contenitore sezione download */
 #download-app {
   background-image: url("../img/app-ordering.jpg");
   height: 400px;
@@ -335,10 +364,13 @@ button:hover {
   width: 15%;
 }
 
+/* contenitore new in */
 .container-news-menu {
   width: 60%;
   margin: 60px auto;
 }
+
+/* contenitore cards news */
 .news {
   display: flex;
   justify-content: space-between;
@@ -353,16 +385,29 @@ button:hover {
   filter: brightness(50%);
 }
 
-
 .item-news > img {
   max-width: 100%;
 }
 
+.color-text-news {
+  color:#555454;
+}
+
+/* regole footer generali */
 .footer-display {
   min-height: 800px;
   padding: 30px 0;
 }
 
+/* sfondo footer */
+.background {
+  background-image: url("../img/footer-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/* regole liste footer */
 .footer-list {
   width: 90%;
   margin: 30px auto;
@@ -372,17 +417,21 @@ button:hover {
 }
 
 .item-footer-list {
-  color: white;
-}
-
-.item-footer-list {
   width: 20%;
+  color: white;
 }
 
 .item-footer-list > h3 {
   margin-bottom: 30px;
 }
 
+/* classe per colore giallo footer */
+.yellow {
+  color: yellow;
+}
+
+
+/* regole img stores */
 .apple > a {
   display: block;
 }
@@ -398,6 +447,7 @@ div.apple > a:first-child {
   border-radius: 5px;
 }
 
+/* regole sezione voucher */
 .voucher-style {
   text-align: center;
 }
@@ -405,25 +455,17 @@ div.apple > a:first-child {
   width: 50%;
 }
 
-.yellow {
-  color: yellow;
-}
-
-
-/* sfondo footer */
-.background {
-  background-image: url("../img/footer-background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
+/* regole footer mid */
 .text-intro-registration {
   margin: 30px 0;
 }
 
 .registration-email {
   text-align: center;
+}
+
+.button-email {
+  margin: 20px 0;
 }
 
 .style-input-button {
@@ -434,12 +476,14 @@ div.apple > a:first-child {
   border: 0;
 }
 
+/*contenitore icone social */
 .socials {
   display: flex;
   justify-content: center;
   margin: 40px 0;
 }
 
+/* classe per distanziare le icone */
 .item-socials {
   margin: 0 7px;
 }
@@ -448,11 +492,12 @@ div.apple > a:first-child {
   color: white;
 }
 
-.button-email {
-  margin: 20px 0;
-}
-
+/* footer copyright */
 .privacy {
   color: yellow;
   text-align: center;
+}
+
+.colorCopyright {
+  color: white;
 }

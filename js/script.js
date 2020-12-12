@@ -243,6 +243,18 @@ data: {
   inputEmail: "",
   // array dove inserire le email input
   emailList: [],
+  //oggetto parte copyright: ThemeFusion
+  themeFusion: {
+    title: "Theme Fusion",
+    href: "#",
+    color: "colorCopyright"
+  },
+  // parte copyright Worpress
+  wordPress: {
+    title: "WordPress",
+    href: "#",
+    color: "colorCopyright"
+  }
 },
 methods: {
   // metodo per pushare le email nell'array
