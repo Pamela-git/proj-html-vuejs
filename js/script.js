@@ -2,9 +2,10 @@ var app = new Vue({
 el: '#root',
 data: {
   // Logo Avada
-  logo: "img/takeout-logo-mobile.png",
-  // Link Logo
-  hrefLogo: "#",
+  logo: {
+    img:"img/takeout-logo-mobile.png",
+    hrefLogo: "#"
+  },
   // classe per far apparire/scomparire il menu dropdown
   hidedrop: "hidedrop",
   // array header menu

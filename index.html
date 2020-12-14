@@ -15,7 +15,7 @@
     <!-- titolo documento -->
     <title>Avada Takeout</title>
   </head>
-  
+
   <body>
     <!-- contenitore Vue -->
     <div id="root">
@@ -23,7 +23,7 @@
       <!-- contenitore header + sezioni principali -->
       <main id="container">
         <!-- contenitore jumbo + header -->
-        <div class="container-jumbo">
+        <section class="container-jumbo">
           <!-- header + bottoni laterali -->
           <div class="container-header">
             <!-- header logo e menu -->
@@ -31,7 +31,7 @@
               <div id="flex-header">
                 <!-- logo -->
                 <div class="item-header">
-                  <a :href="hrefLogo"> <img :src="logo" alt="logo"></a>
+                  <a :href="logo.hrefLogo"> <img :src="logo.img" alt="logo"></a>
                 </div>
                 <!--link  menu nav-->
                 <nav class="flex-menu" id="item-header-mid">
@@ -92,11 +92,11 @@
               </button>
             </div>
           <!-- fine text jumbo-->
-        </div>
+        </section>
         <!-- fine jumbo -->
 
         <!-- blocco popular dishes (background) -->
-        <div class="container-populars">
+        <section class="container-populars">
           <div class="centratura position-populars">
               <!--header popular dishes-->
               <div class="nav-menu">
@@ -169,7 +169,7 @@
               </div>
           </div>
           <!-- fine blocco  cards popular dishes -->
-        </div>
+        </section>
         <!-- fine blocco popular dishes  -->
 
         <!-- contenitore background hamburger -->
@@ -178,110 +178,110 @@
         </div>
 
         <!-- blocco Menu Categories -->
-          <div class="container-news-menu">
-            <!-- menu titolo + button in flex -->
-            <div class="categories">
-              <h2> Menu Categories</h2>
-              <button type="button" name="button" class="button-style-gen">
-                View The Full Menu
-                <i class='fas fa-arrow-alt-circle-right'></i>
-              </button>
-            </div>
+        <section class="container-news-menu">
+          <!-- menu titolo + button in flex -->
+          <div class="categories">
+            <h2> Menu Categories</h2>
+            <button type="button" name="button" class="button-style-gen">
+              View The Full Menu
+              <i class='fas fa-arrow-alt-circle-right'></i>
+            </button>
+          </div>
 
-            <!-- cards categorie in flex-->
-            <div class="cards-menu">
-              <div class="single-card-menu">
-                <a href="#" class="img-menu">
-                  <img src="img/appetizers.jpg" alt="appetizers">
-                </a>
+          <!-- cards categorie in flex-->
+          <div class="cards-menu">
+            <div class="single-card-menu">
+              <a href="#" class="img-menu">
+                <img src="img/appetizers.jpg" alt="appetizers">
                 <div class="title-menu">
                   <span>Appetizers</span>
                 </div>
-              </div>
-              <div class="single-card-menu">
-                <a href="#" class="img-menu">
-                  <img src="img/burgers.jpg" alt="burgers">
-                </a>
+              </a>
+            </div>
+            <div class="single-card-menu">
+              <a href="#" class="img-menu">
+                <img src="img/burgers.jpg" alt="burgers">
                 <div class="title-menu">
                   <span>Burgers</span>
                 </div>
-              </div>
-              <div class="single-card-menu">
-                <a href="#" class="img-menu">
-                  <img src="img/pizza.jpg" alt="pizza">
-                </a>
+              </a>
+            </div>
+            <div class="single-card-menu">
+              <a href="#" class="img-menu">
+                <img src="img/pizza.jpg" alt="pizza">
                 <div class="title-menu">
                   <span>Pizzas</span>
                 </div>
-              </div>
-              <div class="single-card-menu">
-                <a href="#" class="img-menu">
-                  <img src="img/friesmenu.jpg" alt="fries">
-                </a>
+              </a>
+            </div>
+            <div class="single-card-menu">
+              <a href="#" class="img-menu">
+                <img src="img/friesmenu.jpg" alt="fries">
                 <div class="title-menu">
                   <span>Fries</span>
                 </div>
-              </div>
-              <div class="single-card-menu">
-                <a href="#" class="img-menu">
-                  <img src="img/sides.jpg" alt="sides">
-                </a>
+              </a>
+            </div>
+            <div class="single-card-menu">
+              <a href="#" class="img-menu">
+                <img src="img/sides.jpg" alt="sides">
                 <div class="title-menu">
                   <span>Sides</span>
                 </div>
-              </div>
-              <div class="single-card-menu">
-                <a href="#" class="img-menu">
-                  <img src="img/desserts.jpg" alt="desserts">
-                </a>
+              </a>
+            </div>
+            <div class="single-card-menu">
+              <a href="#" class="img-menu">
+                <img src="img/desserts.jpg" alt="desserts">
                 <div class="title-menu">
                   <span>Desserts</span>
                 </div>
-              </div>
-              <div class="single-card-menu">
-                <a href="#" class="img-menu">
-                  <img src="img/beverages.jpg" alt="beverages">
-                </a>
+              </a>
+            </div>
+            <div class="single-card-menu">
+              <a href="#" class="img-menu">
+                <img src="img/beverages.jpg" alt="beverages">
                 <div class="title-menu">
                   <span>Beverages</span>
                 </div>
-              </div>
-              <div class="single-card-menu">
-                <a href="#" class="img-menu">
-                  <img src="img/specials.jpg" alt="specials">
-                </a>
+              </a>
+            </div>
+            <div class="single-card-menu">
+              <a href="#" class="img-menu">
+                <img src="img/specials.jpg" alt="specials">
                 <div class="title-menu">
                   <span>Specials</span>
                 </div>
-              </div>
-              <!-- fine cards categorie menu -->
+              </a>
             </div>
-
-            <!-- caratteristiche speciali e allergeni in flex -->
-            <div class="specials-properties">
-              <div class="special-item">
-                <img src="img/vegetarian.png" alt="veg">
-                <h5>Vegetarian</h5>
-              </div>
-              <div class="special-item">
-                <img src="img/gluten.png" alt="glutenfree">
-                <h5>Gluten Free</h5>
-              </div>
-              <div class="special-item">
-                <img src="img/dairy.png" alt="dairy">
-                <h5>Dairy Free</h5>
-              </div>
-              <div class="special-item">
-                <img src="img/keto.png" alt="keto">
-                <h5>Keto Friendly</h5>
-              </div>
-            </div>
-            <!-- fine blocco allergeni e categorie speciali -->
+            <!-- fine cards categorie menu -->
           </div>
+
+          <!-- caratteristiche speciali e allergeni in flex -->
+          <div class="specials-properties">
+            <div class="special-item">
+              <img src="img/vegetarian.png" alt="veg">
+              <h5>Vegetarian</h5>
+            </div>
+            <div class="special-item">
+              <img src="img/gluten.png" alt="glutenfree">
+              <h5>Gluten Free</h5>
+            </div>
+            <div class="special-item">
+              <img src="img/dairy.png" alt="dairy">
+              <h5>Dairy Free</h5>
+            </div>
+            <div class="special-item">
+              <img src="img/keto.png" alt="keto">
+              <h5>Keto Friendly</h5>
+            </div>
+          </div>
+          <!-- fine blocco allergeni e categorie speciali -->
+        </section>
         <!-- fine blocco menu categories -->
 
         <!-- Download store -->
-        <div id="download-app">
+        <section id="download-app">
           <div class="centratura text-download">
             <h3>Dowload Our</h3>
             <h1>Ordering App</h1>
@@ -296,39 +296,39 @@
             </div>
             <!-- fine bottoni stores -->
           </div>
-        </div>
+        </section>
         <!-- fine download -->
 
         <!-- blocco News -->
-          <div class="container-news-menu">
-            <!-- titolo + button (come blocco categorie menu) -->
-            <div class="categories">
-              <h2>Latest News</h2>
-              <button type="button" name="button" class="button-style-gen"> Read More News <i class='fas fa-arrow-alt-circle-right'></i></button>
-            </div>
+        <section class="container-news-menu">
+          <!-- titolo + button (come blocco categorie menu) -->
+          <div class="categories">
+            <h2>Latest News</h2>
+            <button type="button" name="button" class="button-style-gen"> Read More News <i class='fas fa-arrow-alt-circle-right'></i></button>
+          </div>
 
-            <!-- new in flex -->
-            <div class="news">
-              <div class="item-news ">
-                  <img src="img/pancake-burger-400x300.jpg" class="overlayimg" alt="pancakeburger">
-                <h2>New: The Pancake Burger</h2>
-                <p class="color-text-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </div>
-              <div class="item-news">
-                <img src="img/new-milkshake-menu-400x300.jpg" class="overlayimg" alt="milkshake">
-                <h2>New: The Milkshake Menu</h2>
-                <p class="color-text-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </div>
+          <!-- new in flex -->
+          <div class="news">
+            <div class="item-news ">
+                <img src="img/pancake-burger-400x300.jpg" class="overlayimg" alt="pancakeburger">
+              <h2>New: The Pancake Burger</h2>
+              <p class="color-text-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+            </div>
+            <div class="item-news">
+              <img src="img/new-milkshake-menu-400x300.jpg" class="overlayimg" alt="milkshake">
+              <h2>New: The Milkshake Menu</h2>
+              <p class="color-text-news">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
             </div>
           </div>
-          <!-- fine blocco news -->
+        </section>
+        <!-- fine blocco news -->
       </main>
       <!-- fine header + sezioni principali -->
 
       <!-- footer -->
       <footer :class="footerBackground" class="footer-display">
         <!-- liste footer in flex -->
-        <div class="footer-list">
+        <section class="footer-list">
           <div v-for="menu in orderOnline" class="item-footer-list">
             <h3>{{menu.title}}</h3>
             <ul>
@@ -362,11 +362,11 @@
             <img :src="voucher.img" alt="">
             <p> Just Use The Code <br> <span style="color: yellow"> {{voucher.saleCode}}</span> <br> At Checkout</p>
           </div>
-        </div>
+        </section>
 
         <!-- mid footer registration-->
-        <div class="registration-email">
-          <a :href="hrefLogo"><img :src="logo" alt="avadatakeout"></a>
+        <section class="registration-email">
+          <a :href="logo.hrefLogo"><img :src="logo.img" alt="avadatakeout"></a>
           <div class="text-intro-registration">
             <h1 style="color:yellow">{{titleFootermid}}</h1>
             <h5 style="margin-top: 20px; color: white">{{registrationTitle}}</h5>
@@ -375,10 +375,10 @@
           <div class="button-email">
             <button type="button" name="button" class="style-input-button button-style-gen" @click="buttonInput">Subscribe</button>
           </div>
-        </div>
+        </section>
 
         <!-- copyright + icone social-->
-        <div class="icon-copyright">
+        <section class="icon-copyright">
           <div class="socials">
             <div class="item-socials" v-for="icon in socialIcons">
               <a :href="icon.href">
@@ -394,7 +394,7 @@
               <a :href="wordPress.href" :class="wordPress.color">{{wordPress.title}}</a>
             </span>
           </div>
-        </div>
+        </section>
 
       </footer>
       <!-- fine footer -->

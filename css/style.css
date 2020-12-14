@@ -293,6 +293,13 @@ button:hover {
 .single-card-menu {
   width: 24%;
   margin-bottom: 5px;
+  /* position: relative; */
+}
+
+.img-menu {
+  display: block;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 .img-menu > img{
@@ -382,7 +389,7 @@ button:hover {
 }
 
 .overlayimg:hover {
-  filter: brightness(50%);
+  filter: brightness(70%);
 }
 
 .item-news > img {
