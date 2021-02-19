@@ -293,7 +293,6 @@ button:hover {
 .single-card-menu {
   width: 24%;
   margin-bottom: 5px;
-  /* position: relative; */
 }
 
 .img-menu {
@@ -309,6 +308,8 @@ button:hover {
 
 /* contenitore tipo di categoria */
 .title-menu {
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
@@ -318,9 +319,13 @@ button:hover {
   transform: translate(-50% , -50%);
   color: white;
   font-weight: bold;
-  text-align: center;
-  line-height:  150px;
 }
+
+.text-menu {
+  width: 100%;
+  text-align: center;
+}
+
 
 /* contenitore allergeni */
 .specials-properties {
@@ -380,6 +385,7 @@ button:hover {
 /* contenitore cards news */
 .news {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -419,6 +425,7 @@ button:hover {
   width: 90%;
   margin: 30px auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   color: white;
 }
@@ -476,7 +483,7 @@ div.apple > a:first-child {
 }
 
 .style-input-button {
-  width: 500px;
+  width: 50%;
   height: 30px;
   border-radius: 30px;
   padding: 10px;
@@ -507,4 +514,70 @@ div.apple > a:first-child {
 
 .colorCopyright {
   color: white;
+}
+
+@media all and (max-width: 992px) {
+  .style-buttons-right {
+    display: none;
+  }
+
+  .style-text-jumbo {
+    text-align: center;
+  }
+
+  .centratura {
+    width: 80%;
+  }
+
+  .nav-menu {
+    justify-content: space-between;
+  }
+
+
+  .single-card-menu {
+    width: 48%;
+    margin: 5px 1px;
+  }
+
+  .special-item {
+    width: 50%;
+  }
+
+  .button-app > img {
+    width: 30%;
+  }
+
+  .item-footer-list {
+    width: 50%;
+    text-align: center;
+
+  }
+
+  .style-input-button {
+    width: 50%;
+  }
+
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .single-card-menu {
+    width: 100%;
+  }
+
+  .item-news {
+    width: 100%;
+  }
+
+  .button-app > img {
+    width: 30%;
+  }
+
+  .style-input-button {
+    width: 80%;
+  }
+
 }

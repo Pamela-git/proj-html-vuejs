@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -37,13 +38,11 @@
                 <nav class="flex-menu" id="item-header-mid">
                   <ul>
                     <li v-for="(item, index) in menu" class="drop">
-                      <!-- solo se l'index è uguale a 0 assegnare la classe yellow -->
                       <a :href="item.href" :class="index === 0 ? 'yellow' : ''">
                         {{item.titlelist}}
                         <i :class="item.icon" @click="showdrop(index)"></i>
                       </a>
                       <!-- dropdown home -->
-                      <!-- solo se l'index è uguale a 0 creare un dropdown -->
                       <div class="dropdown" v-if="index === 0" :class="hidedrop">
                         <ul>
                           <!-- lista link dropdown -->
@@ -61,7 +60,7 @@
             <!-- fine header logo + nav -->
 
             <!-- bottoni laterali -->
-            <div id="style-button" class="style-buttons-right">
+            <div class="style-buttons-right">
               <!-- bottone aggiungi -->
               <button type="button" name="button" class="style-plus-button">
                 <i class="fas fa-plus"></i>
@@ -104,15 +103,15 @@
                   <i class="far fa-clock"></i>
                   <span class="style-span-info">24/7 Delivery</span>
                 </div>
-                <div class="">
+                <div>
                   <i class="fas fa-hamburger"></i>
                   <span class="style-span-info">Over 100 dishes</span>
                 </div>
-                <div class="">
+                <div>
                   <i class="fas fa-mobile-alt"></i>
                   <span class="style-span-info">In app ordering</span>
                 </div>
-                <div class="">
+                <div>
                   <i class="fas fa-car"></i>
                   <span class="style-span-info">Fast Delivery</span>
                 </div>
@@ -194,7 +193,7 @@
               <a href="#" class="img-menu">
                 <img src="img/appetizers.jpg" alt="appetizers">
                 <div class="title-menu">
-                  <span>Appetizers</span>
+                  <span class="text-menu">Appetizers</span>
                 </div>
               </a>
             </div>
@@ -202,7 +201,7 @@
               <a href="#" class="img-menu">
                 <img src="img/burgers.jpg" alt="burgers">
                 <div class="title-menu">
-                  <span>Burgers</span>
+                  <span class="text-menu">Burgers</span>
                 </div>
               </a>
             </div>
@@ -210,7 +209,7 @@
               <a href="#" class="img-menu">
                 <img src="img/pizza.jpg" alt="pizza">
                 <div class="title-menu">
-                  <span>Pizzas</span>
+                  <span class="text-menu">Pizzas</span>
                 </div>
               </a>
             </div>
@@ -218,7 +217,7 @@
               <a href="#" class="img-menu">
                 <img src="img/friesmenu.jpg" alt="fries">
                 <div class="title-menu">
-                  <span>Fries</span>
+                  <span class="text-menu">Fries</span>
                 </div>
               </a>
             </div>
@@ -226,7 +225,7 @@
               <a href="#" class="img-menu">
                 <img src="img/sides.jpg" alt="sides">
                 <div class="title-menu">
-                  <span>Sides</span>
+                  <span class="text-menu">Sides</span>
                 </div>
               </a>
             </div>
@@ -234,7 +233,7 @@
               <a href="#" class="img-menu">
                 <img src="img/desserts.jpg" alt="desserts">
                 <div class="title-menu">
-                  <span>Desserts</span>
+                  <span class="text-menu">Desserts</span>
                 </div>
               </a>
             </div>
@@ -242,7 +241,7 @@
               <a href="#" class="img-menu">
                 <img src="img/beverages.jpg" alt="beverages">
                 <div class="title-menu">
-                  <span>Beverages</span>
+                  <span class="text-menu">Beverages</span>
                 </div>
               </a>
             </div>
@@ -250,7 +249,7 @@
               <a href="#" class="img-menu">
                 <img src="img/specials.jpg" alt="specials">
                 <div class="title-menu">
-                  <span>Specials</span>
+                  <span class="text-menu">Specials</span>
                 </div>
               </a>
             </div>
