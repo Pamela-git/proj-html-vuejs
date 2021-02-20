@@ -8,6 +8,7 @@ data: {
   },
   // classe per far apparire/scomparire il menu dropdown
   hidedrop: "hidedrop",
+  hamburger: "mobile-menu",
   // array header menu
   menu: [
     {
@@ -269,6 +270,14 @@ methods: {
       this.hidedrop = "showdrop"
     } else {
       this.hidedrop = "hidedrop"
+    }
+  },
+
+  showmenu() {
+    if ((this.hamburger === "mobile-menu")) {
+      this.hamburger = "showdrop"
+    } else {
+      this.hamburger = "mobile-menu"
     }
   }
 }

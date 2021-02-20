@@ -64,6 +64,7 @@ button:hover {
   padding: 5px 5px;
 }
 
+
 /* contenitore header logo + menu nav*/
 #style-header {
   width: 60%;
@@ -72,7 +73,7 @@ button:hover {
 }
 
 /* header */
-#flex-header {
+.flex-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,6 +87,15 @@ button:hover {
   width: 60%;
 }
 
+
+.hamburger-menu {
+  display: none;
+}
+
+#item-header-ham {
+  display: none;
+}
+
 /* nav header */
 .flex-menu {
   display: flex;
@@ -96,7 +106,7 @@ button:hover {
 .drop {
   position: relative;
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 7px;
   color: white;
 }
 
@@ -111,6 +121,11 @@ button:hover {
   border-radius: 10px;
   padding: 5px;
   color: white;
+}
+
+.dropdown-mobile {
+  display: inline-block;
+  margin: 0 5px;
 }
 
 /* regole per nascondere/apparire dropdown */
@@ -136,6 +151,15 @@ button:hover {
   padding: 15px;
   border: 0;
   background-color: #bf1e23;
+}
+
+
+.fa-bars {
+  font-size: 50px;
+  color: white;
+}
+.mobile-menu {
+  display:none;
 }
 
 /* regole generali bottoni demos e sales */
@@ -516,7 +540,24 @@ div.apple > a:first-child {
   color: white;
 }
 
+/* tablet */
 @media all and (max-width: 992px) {
+  #style-header {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .item-header {
+    width: 50%;
+  }
+
+  #ham {
+    text-align: right;
+  }
+
+  #extend {
+    display: none;
+  }
   .style-buttons-right {
     display: none;
   }
@@ -557,11 +598,21 @@ div.apple > a:first-child {
     width: 50%;
   }
 
+  .hamburger-menu {
+    display: block;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  #item-header-ham {
+    width: 100%;
+    text-align: left;
+    display: block;
 
-
+  }
 }
 
+/* mobile */
 @media screen and (max-width: 600px) {
 
   .single-card-menu {
