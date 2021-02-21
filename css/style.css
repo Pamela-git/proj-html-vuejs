@@ -5,12 +5,16 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Barlow', 'Open Sans', sans-serif;
   font-weight: 400;
 }
 
 /* regole comuni alle liste, ai tag link e ai bottoni */
+ul li a:hover {
+  color: yellow;
+}
 li {
   list-style-type: none;
   margin: 10px 0;
@@ -593,6 +597,7 @@ div.apple > a:first-child {
     text-align: center;
 
   }
+
 
   .style-input-button {
     width: 50%;

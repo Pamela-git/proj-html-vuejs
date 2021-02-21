@@ -262,6 +262,7 @@ methods: {
   // metodo per pushare le email nell'array
   buttonInput: function() {
     this.emailList.push(this.inputEmail);
+    this.inputEmail = "";
     console.log(this.emailList);
   },
   // funzione per nascondere/far comparire il dropdown

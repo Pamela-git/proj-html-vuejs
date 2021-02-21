@@ -363,20 +363,20 @@
         <section class="footer-list">
           <div v-for="menu in orderOnline" class="item-footer-list">
             <h3>{{menu.title}}</h3>
-            <ul>
-              <li v-for="link in menu.linksMenu"> <a :href="link.href"> {{link.name}}</a></li>
+            <ul class="hover-list">
+              <li v-for="link in menu.linksMenu" > <a  :href="link.href"> {{link.name}}</a></li>
             </ul>
           </div>
           <div v-for="nav in navigate" class="item-footer-list">
             <h3>{{nav.title}}</h3>
-            <ul>
-              <li v-for="(link, index) in nav.linksNav" > <a :href="link.href" :class="index === 0 ? 'yellow' : ''"> {{link.name}}</a></li>
+            <ul class="hover-list">
+              <li v-for="(link, index) in nav.linksNav" class="hover-list"> <a  :href="link.href" :class="index === 0 ? 'yellow' : ''"> {{link.name}}</a></li>
             </ul>
           </div>
           <div v-for="info in information" class="item-footer-list">
             <h3>{{info.title}}</h3>
-            <ul>
-              <li v-for="link in info.linksInfo"> <a :href="link.href"> {{link.name}}</a></li>
+            <ul class="hover-list">
+              <li v-for="link in info.linksInfo" class="hover-list" > <a :href="link.href"> {{link.name}}</a></li>
             </ul>
             <div class="apple">
               <a :href="info.appStore.href"> <img :src="info.appStore.img" alt=""> </a>
